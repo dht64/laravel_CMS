@@ -19,11 +19,13 @@ elixir(function(mix) {
 			'libs/bootstrap.css',
 			'libs/font-awesome.css',
 			'libs/styles.css'					
+				
 		], './public/css/libs.css')
 		
 		.scripts([
-			'libs/bootstrap.js',
-			'libs/jquery.js',
-			'libs/scripts.js'		
+//			'libs/bootstrap.js',
+//			'libs/jquery.js',
+//			'libs/scripts.js',		
+			'libs/libs.js'		
 		], './public/js/libs.js');
 });
