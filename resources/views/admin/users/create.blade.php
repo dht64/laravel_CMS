@@ -5,7 +5,7 @@
 	
 	{!! Form::open(['method'=>'POST', 'action'=>'AdminUsersController@store', 'files'=>true]) !!}
 	<div class="form-group">
-		{!! Form::label('name', 'Title:') !!}
+		{!! Form::label('name', 'Name:') !!}
 		{!! Form::text('name', null, ['class'=>'form-control']) !!}
 	</div>
 	
@@ -25,8 +25,8 @@
 	</div>
 	
 	<div class="form-group">
-		{!! Form::label('password', 'Password:') !!}
-		{!! Form::password('password', ['class'=>'form-control']) !!}
+		{!! Form::label('file', 'File:') !!}
+		{!! Form::file('file', null, ['class'=>'form-control']) !!}
 	</div>
 	
 	<div class="form-group">
