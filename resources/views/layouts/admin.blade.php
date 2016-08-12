@@ -52,9 +52,8 @@
                         <ul class="nav side-menu">
                             <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="">All Users</a></li>
-                                    <li><a href="">Categories</a></li>
-                                    <li><a href="">Pages</a></li>
+                                    <li><a href="{{route('admin.users.index')}}">All Users</a></li>
+                                    <li><a href="{{route('admin.users.create')}}">Create User</a></li>
                                 </ul>
                             </li>
 
