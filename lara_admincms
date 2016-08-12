@@ -31,6 +31,7 @@
                 </Folder>
                 <Folder name="Requests">
                     <File name="app\Http\Requests\Request.php" />
+                    <File name="app\Http\Requests\UsersRequest.php" />
                 </Folder>
                 <File name="app\Http\Kernel.php" />
                 <File name="app\Http\routes.php" />
