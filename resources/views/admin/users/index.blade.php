@@ -1,6 +1,15 @@
 @extends('layouts.admin')
 
 @section('content')
+
+	@if(Session::has('deleted_user'))
+		<div class="bg-danger">{{session('deleted_user')}}</div>
+	@endif
+	
+	@if(Session::has('created_user'))
+		<div class="bg-info">{{session('created_user')}}</div>
+	@endif
+
 	<h1>User</h1>
 	<table class="table table-bordered table-striped">
     <thead>

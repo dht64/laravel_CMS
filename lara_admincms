@@ -24,6 +24,7 @@
                     <File name="app\Http\Controllers\HomeController.php" />
                 </Folder>
                 <Folder name="Middleware">
+                    <File name="app\Http\Middleware\Admin.php" />
                     <File name="app\Http\Middleware\Authenticate.php" />
                     <File name="app\Http\Middleware\EncryptCookies.php" />
                     <File name="app\Http\Middleware\RedirectIfAuthenticated.php" />
