@@ -19,6 +19,7 @@
                         <File name="app\Http\Controllers\Auth\AuthController.php" />
                         <File name="app\Http\Controllers\Auth\PasswordController.php" />
                     </Folder>
+                    <File name="app\Http\Controllers\AdminPostsController.php" />
                     <File name="app\Http\Controllers\AdminUsersController.php" />
                     <File name="app\Http\Controllers\Controller.php" />
                     <File name="app\Http\Controllers\HomeController.php" />
@@ -55,6 +56,7 @@
             </Folder>
             <File name="app\Role.php" />
             <File name="app\Photo.php" />
+            <File name="app\Post.php" />
             <File name="app\User.php" />
         </Folder>
         <Folder name="bootstrap">
@@ -90,6 +92,7 @@
                 <File name="database\migrations\2016_08_09_160444_create_roles_table.php" />
                 <File name="database\migrations\2016_08_12_064435_add_photo_id_to_users.php" />
                 <File name="database\migrations\2016_08_12_091028_create_photos_table.php" />
+                <File name="database\migrations\2016_08_17_033501_create_posts_table.php" />
             </Folder>
             <Folder name="seeds">
                 <File name="database\seeds\.gitkeep" />
@@ -190,6 +193,7 @@
                     <File name="resources\views\auth\register.blade.php" />
                 </Folder>
                 <Folder name="errors">
+                    <File name="resources\views\errors\404.blade.php" />
                     <File name="resources\views\errors\503.blade.php" />
                 </Folder>
                 <Folder name="includes">

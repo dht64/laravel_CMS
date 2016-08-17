@@ -57,11 +57,10 @@
                                 </ul>
                             </li>
 
-                            <li><a><i class="fa fa-desktop"></i> Media <span class="fa fa-chevron-down"></span></a>
+                            <li><a><i class="fa fa-desktop"></i> Posts <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="">All Media</a></li>
-                                    <li><a href="">Upload</a></li>
-                                    <li><a href="">Upload</a></li>
+                                    <li><a href="{{route('admin.posts.index')}}">All Posts</a></li>
+                                    <li><a href="{{route('admin.posts.create')}}">Create Post</a></li>
                                 </ul>
                             </li>
 
