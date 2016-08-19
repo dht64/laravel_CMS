@@ -63,7 +63,7 @@ class AdminUsersController extends Controller
 			$input['photo_id'] = $photo->id;
 		}
 		
-		//$input['password'] = bcrypt($request->password);
+		$input['password'] = bcrypt($request->password);
 		
 		User::create($input);
 		
