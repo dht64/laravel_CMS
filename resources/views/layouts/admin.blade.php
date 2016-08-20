@@ -57,20 +57,26 @@
                                 </ul>
                             </li>
 
-                            <li><a><i class="fa fa-desktop"></i> Posts <span class="fa fa-chevron-down"></span></a>
+                            <li><a><i class="fa fa-edit"></i> Posts <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="{{route('admin.posts.index')}}">All Posts</a></li>
                                     <li><a href="{{route('admin.posts.create')}}">Create Post</a></li>
                                 </ul>
                             </li>
 
-                            <li><a><i class="fa fa-edit"></i> Categories <span class="fa fa-chevron-down"></span></a>
+                            <li><a><i class="fa fa-tags"></i> Categories <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="{{route('admin.categories.index')}}">All Categories</a></li>
                                     <li><a href="{{route('admin.categories.create')}}">Create Category</a></li>
                                 </ul>
                             </li>
-
+							
+							<li><a><i class="fa fa-photo"></i> Media <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="{{route('admin.media.index')}}">All Media</a></li>
+                                    <li><a href="{{route('admin.media.create')}}">Upload Media</a></li>
+                                </ul>
+                            </li>
 
                         </ul>
                     </div>
@@ -208,14 +214,14 @@
             </div>
             <div class="clearfix"></div>
 
-            @yield('footer')
-
+            {{-- @yield('footer') --}}
         </footer>
         <!-- /footer content -->
     </div>
 </div>
 
- <script src="{{asset('js/libs.js')}}"></script>
+@yield('scripts')
+<script src="{{asset('js/libs.js')}}"></script>
 <script>
     CKEDITOR.replace( 'body' );
 </script>

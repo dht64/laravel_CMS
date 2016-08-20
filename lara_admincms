@@ -19,10 +19,11 @@
                         <File name="app\Http\Controllers\Auth\AuthController.php" />
                         <File name="app\Http\Controllers\Auth\PasswordController.php" />
                     </Folder>
+                    <File name="app\Http\Controllers\AdminCategoriesController.php" />
+                    <File name="app\Http\Controllers\AdminMediasController.php" />
                     <File name="app\Http\Controllers\AdminPostsController.php" />
                     <File name="app\Http\Controllers\AdminUsersController.php" />
                     <File name="app\Http\Controllers\Controller.php" />
-                    <File name="app\Http\Controllers\HomeController.php" />
                 </Folder>
                 <Folder name="Middleware">
                     <File name="app\Http\Middleware\Admin.php" />
@@ -30,8 +31,10 @@
                     <File name="app\Http\Middleware\EncryptCookies.php" />
                     <File name="app\Http\Middleware\RedirectIfAuthenticated.php" />
                     <File name="app\Http\Middleware\VerifyCsrfToken.php" />
+                    <File name="app\Http\Controllers\HomeController.php" />
                 </Folder>
                 <Folder name="Requests">
+                    <File name="app\Http\Requests\PostsCreateRequest.php" />
                     <File name="app\Http\Requests\Request.php" />
                     <File name="app\Http\Requests\UsersEditRequest.php" />
                     <File name="app\Http\Requests\UsersRequest.php" />
@@ -54,6 +57,7 @@
                 <File name="app\Providers\EventServiceProvider.php" />
                 <File name="app\Providers\RouteServiceProvider.php" />
             </Folder>
+            <File name="app\Category.php" />
             <File name="app\Role.php" />
             <File name="app\Photo.php" />
             <File name="app\Post.php" />
@@ -93,6 +97,7 @@
                 <File name="database\migrations\2016_08_12_064435_add_photo_id_to_users.php" />
                 <File name="database\migrations\2016_08_12_091028_create_photos_table.php" />
                 <File name="database\migrations\2016_08_17_033501_create_posts_table.php" />
+                <File name="database\migrations\2016_08_17_173434_create_categories_table.php" />
             </Folder>
             <Folder name="seeds">
                 <File name="database\seeds\.gitkeep" />
@@ -168,6 +173,10 @@
                     <Folder name="categories">
                         <File name="resources\views\admin\categories\edit.blade.php" />
                         <File name="resources\views\admin\categories\index.blade.php" />
+                    </Folder>
+                    <Folder name="media">
+                        <File name="resources\views\admin\media\create.blade.php" />
+                        <File name="resources\views\admin\media\index.blade.php" />
                     </Folder>
                     <Folder name="posts">
                         <File name="resources\views\admin\posts\create.blade.php" />
