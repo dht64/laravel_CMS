@@ -34,7 +34,7 @@
                 <!-- menu profile quick info -->
                 <div class="profile">
                     <div class="profile_pic">
-                        <img src="{{--$admin->photo->file--}}" alt="..." class="img-circle profile_img">
+                        <img src="{{URL::asset(Auth::user()->photo ? Auth::user()->photo->file : "")}}" alt="..." class="img-circle profile_img">
                     </div>
                     <div class="profile_info">
                         <span>Welcome,</span>
@@ -50,7 +50,7 @@
                     <div class="menu_section">
                         <h3>General</h3>
                         <ul class="nav side-menu">
-                            <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                            <li><a><i class="fa fa-home"></i> Users <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="{{route('admin.users.index')}}">All Users</a></li>
                                     <li><a href="{{route('admin.users.create')}}">Create User</a></li>
@@ -61,13 +61,14 @@
                                 <ul class="nav child_menu">
                                     <li><a href="{{route('admin.posts.index')}}">All Posts</a></li>
                                     <li><a href="{{route('admin.posts.create')}}">Create Post</a></li>
+                                    <li><a href="{{route('admin.comments.index')}}">All Comments</a></li>
                                 </ul>
                             </li>
 
                             <li><a><i class="fa fa-tags"></i> Categories <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="{{route('admin.categories.index')}}">All Categories</a></li>
-                                    <li><a href="{{route('admin.categories.create')}}">Create Category</a></li>
+                                    <!--<li><a href="{{route('admin.categories.create')}}">Create Category</a></li>-->
                                 </ul>
                             </li>
 							
@@ -76,7 +77,7 @@
                                     <li><a href="{{route('admin.media.index')}}">All Media</a></li>
                                     <li><a href="{{route('admin.media.create')}}">Upload Media</a></li>
                                 </ul>
-                            </li>
+                            </li>							
 
                         </ul>
                     </div>
