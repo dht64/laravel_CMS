@@ -20,7 +20,7 @@
 		</thead>
 		<tbody>
 		
-		@foreach($comments as $comment)		
+		@foreach($comments as $comment)
 			<tr>
 				<td>{{$comment->id}}</td>
 				<td>{{$comment->author}}</td>
@@ -57,7 +57,7 @@
 					
 				</td>
 			</tr>
-		@endforeach
+			@endforeach
 			
 		</tbody>
 	</table>

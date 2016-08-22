@@ -25,9 +25,9 @@
 		<table class="table">
 			<thead>
 				<tr>
-					<td>id</td>
-					<td>Name</td>
-					<td>Created date</td>
+					<th>id</th>
+					<th>Name</th>
+					<th>Created date</th>
 				</tr>
 			</thead>
 			<tbody>
