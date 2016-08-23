@@ -57,6 +57,7 @@ class PostCommentsController extends Controller
 		
 		return redirect()->back(); //return to same page
 		
+		//return $request->all();
     }
 
     /**

@@ -147,9 +147,12 @@
     </div>
     <!-- /.container -->
 
-    <!-- jQuery -->
+    <!-- bootstrap js -->
 	<script src="{{asset('js/bootstrap.min.js')}}"></script>
-
+	<script src="{{asset('js/jquery-3.1.0.min.js')}}"></script>
+	
+	@yield('scripts')
+	
 </body>
 
 </html>

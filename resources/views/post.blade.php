@@ -63,7 +63,7 @@
 		<hr>
 	@endif
 		
-		<!-- Posted Comments -->
+	<!-- Posted Comments -->
 		
 	@if(count($comments))
 		@foreach($comments as $comment)
@@ -79,45 +79,64 @@
 				</div>
 				<p>{{$comment->body}}</p>
 				
-				@if(count($comment->replies))
-					@foreach($comment->replies as $reply)
-				
-					<!-- Nested Comment -->
-					<div class="media">
-						<a class="pull-left" href="#">
-							<img class="media-object" height="64px" src="{{URL::asset($reply->photo)}}" alt="http://placehold.it/64x64">
-						</a>
-						<div class="media-body">
-							<h4 class="media-heading">{{$reply->author}}
-								<small>{{$reply->created_at->diffForHumans()}}</small>
-							</h4>
-							{{$reply->body}}
-						</div>
-						
-						<br><br>
-						
-						{!! Form::open(['method'=>'POST', 'action'=>'CommentRepliesController@createReply']) !!}
-						<input type="hidden" name="comment_id" value="{{$comment->id}}">
-						<div class="form-group">
-							{!! Form::label('body', 'Reply:') !!}
-							{!! Form::textarea('body', null, ['class'=>'form-control', 'rows'=>2]) !!}
-						</div>
-				
-						<div class="form-group">
-							{!! Form::submit('Reply', ['class'=>'btn btn-primary']) !!}
-						</div>
-						{!! Form::close() !!}
-						
-					</div>
-					<!-- End Nested Comment -->
+				<!-- Nested Comment -->
+				<div class="media">
+					<!-- Reply Content -->
+					@if(count($comment->replies))
+						@foreach($comment->replies as $reply)		
+							@if($reply->is_active == 1)
+								<a class="pull-left" href="#">
+									<img class="media-object" height="64px" src="{{URL::asset($reply->photo)}}" alt="http://placehold.it/64x64">
+								</a>
+								<div class="media-body">
+									<h4 class="media-heading">{{$reply->author}}
+										<small>{{$reply->created_at->diffForHumans()}}</small>
+									</h4>
+									{{$reply->body}}
+								</div>
+								
+								<br><br>
+							@endif
+						@endforeach
+					@endif
+					<!-- End Reply Content -->
+			
+					<!-- Reply Form -->
+					<div class="comment-reply-container">
+						<button class="toggle-reply btn btn-primary btn-sm pull-right">Reply</button>
+						<div class="comment-reply">
+							{!! Form::open(['method'=>'POST', 'action'=>'CommentRepliesController@createReply']) !!}
+							<input type="hidden" name="comment_id" value="{{$comment->id}}">
+							<div class="form-group">
+								{!! Form::label('body', 'Reply:') !!}
+								{!! Form::textarea('body', null, ['class'=>'form-control', 'rows'=>2]) !!}
+							</div>
 					
-					@endforeach
-				@endif
+							<div class="form-group">
+								{!! Form::submit('Submit', ['class'=>'btn btn-primary btn-sm']) !!}
+							</div>
+							{!! Form::close() !!}
+						</div>
+					</div>
+					<!-- End Reply Form -->
+
+				</div>
+				<!-- End Nested Comment -->
 				
 			</div>
 			<!-- End Comment -->
 			
 		@endforeach
 	@endif
-	
+	<!-- End Posted Comments -->
+@stop
+
+@section('scripts')
+
+	<script>
+		$(".comment-reply-container .toggle-reply").on('click', function(){
+			$(this).next().slideToggle("slow");
+		});
+	</script>
+
 @stop
