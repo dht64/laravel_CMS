@@ -30,7 +30,7 @@
 				<td>
 					
 					@if($reply->is_active == 1)
-						{!! Form::open(['method'=>'PATCH', 'action'=>['CommentRepliesController@update', $reply->id]]) !!}
+						{!! Form::open(['method'=>'PATCH', 'action'=>['AdminCommentRepliesController@update', $reply->id]]) !!}
 							<input type="hidden" name="is_active" value="0">
 							<div class="form-group">
 								{!! Form::submit('Un-approve', ['class'=>'btn btn-warning btn-sm']) !!}
@@ -38,7 +38,7 @@
 						{!! Form::close() !!}
 					
 					@else
-						{!! Form::open(['method'=>'PATCH', 'action'=>['CommentRepliesController@update', $reply->id]]) !!}
+						{!! Form::open(['method'=>'PATCH', 'action'=>['AdminCommentRepliesController@update', $reply->id]]) !!}
 							<input type="hidden" name="is_active" value="1">
 							<div class="form-group">
 								{!! Form::submit('Approve', ['class'=>'btn btn-primary btn-sm']) !!}
@@ -48,7 +48,7 @@
 					@endif
 				</td>
 				<td>
-					{!! Form::open(['method'=>'DELETE', 'action'=>['CommentRepliesController@destroy', $reply->id]]) !!}
+					{!! Form::open(['method'=>'DELETE', 'action'=>['AdminCommentRepliesController@destroy', $reply->id]]) !!}
 						<input type="hidden" name="is_active" value="1">
 						<div class="form-group">
 							{!! Form::submit('Delete', ['class'=>'btn btn-danger btn-sm']) !!}

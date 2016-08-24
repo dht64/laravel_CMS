@@ -6,10 +6,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 use App\Http\Requests;
+use App\CommentReply;
 use App\Comment;
-use App\Post;
 
-class PostCommentsController extends Controller
+class AdminCommentRepliesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -40,22 +40,6 @@ class PostCommentsController extends Controller
     public function store(Request $request)
     {
         //
-		$user = Auth::user();
-		$data = [
-			'post_id'	=> $request->post_id,
-			'author'	=> $user->name,
-			'email'		=> $user->email,
-			'photo'		=> $user->photo->file,
-			'body'		=> $request->body,
-		];
-		
-		Comment::create($data);
-		
-		$request->session()->flash('comment_message', 'Your message has been submitted and is waiting moderation');
-		
-		return redirect()->back(); //return to same page
-		
-		//return $request->all();
     }
 
     /**
@@ -67,6 +51,10 @@ class PostCommentsController extends Controller
     public function show($id)
     {
         //
+		$comment = Comment::findOrFail($id);
+		$replies = $comment->replies;
+		
+		return view('admin.comments.replies.show', compact('replies'));
     }
 
     /**
@@ -90,6 +78,9 @@ class PostCommentsController extends Controller
     public function update(Request $request, $id)
     {
         //
+		CommentReply::findOrFail($id)->update($request->all());
+		
+		return redirect()->back();
     }
 
     /**
@@ -101,5 +92,8 @@ class PostCommentsController extends Controller
     public function destroy($id)
     {
         //
+		CommentReply::findOrFail($id)->delete();
+		
+		return redirect()->back();
     }
 }
