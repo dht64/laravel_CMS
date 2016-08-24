@@ -104,6 +104,7 @@
                 <File name="database\migrations\2016_08_17_173434_create_categories_table.php" />
                 <File name="database\migrations\2016_08_21_041325_create_comments_table.php" />
                 <File name="database\migrations\2016_08_21_050142_create_comment_replies_table.php" />
+                <File name="database\migrations\2016_08_23_090547_add_slug_to_posts_table.php" />
             </Folder>
             <Folder name="seeds">
                 <File name="database\seeds\.gitkeep" />
@@ -115,6 +116,8 @@
             <Folder name="css">
                 <File name="public\css\app.css" />
                 <File name="public\css\app.css.map" />
+                <File name="public\css\blog-post.css" />
+                <File name="public\css\bootstrap.min.css" />
                 <File name="public\css\libs.css" />
                 <File name="public\css\libs.css.map" />
             </Folder>
@@ -184,8 +187,10 @@
                     <Folder name="comments">
                         <Folder name="replies">
                             <File name="resources\views\admin\comments\replies\index.blade.php" />
+                            <File name="resources\views\admin\comments\replies\show.blade.php" />
                         </Folder>
                         <File name="resources\views\admin\comments\index.blade.php" />
+                        <File name="resources\views\admin\comments\show.blade.php" />
                     </Folder>
                     <Folder name="media">
                         <File name="resources\views\admin\media\create.blade.php" />

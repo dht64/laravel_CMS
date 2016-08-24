@@ -22,6 +22,6 @@ class Admin
 			}
 		}
         
-		return redirect('/admin');
+		return redirect('/');
     }
 }

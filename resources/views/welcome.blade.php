@@ -8,7 +8,8 @@
                 <div class="panel-heading">Welcome</div>
 
                 <div class="panel-body">
-                    Your Application's Landing Page.
+                    Your Application's Landing Page. <br><br>
+					Please log in as Admin to access Admin Panel!
                 </div>
             </div>
         </div>
