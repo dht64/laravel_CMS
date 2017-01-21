@@ -11,6 +11,22 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/Http/Controllers/AdminPostsController.php",
+			"settings":
+			{
+				"buffer_size": 3042,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": ".env",
+			"settings":
+			{
+				"buffer_size": 451,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -62,13 +78,16 @@
 	"expanded_folders":
 	[
 		"/C/xampp/htdocs/lara_admincms",
-		"/C/xampp/htdocs/lara_admincms/resources",
+		"/C/xampp/htdocs/lara_admincms/app/Http/Controllers",
+		"/C/xampp/htdocs/lara_admincms/database",
 		"/C/xampp/htdocs/lara_admincms/resources/assets",
 		"/C/xampp/htdocs/lara_admincms/resources/assets/css",
 		"/C/xampp/htdocs/lara_admincms/resources/assets/css/libs",
 		"/C/xampp/htdocs/lara_admincms/resources/assets/js",
 		"/C/xampp/htdocs/lara_admincms/resources/assets/js/libs",
-		"/C/xampp/htdocs/lara_admincms/resources/assets/sass"
+		"/C/xampp/htdocs/lara_admincms/resources/assets/sass",
+		"/C/xampp/htdocs/lara_admincms/resources/views",
+		"/C/xampp/htdocs/lara_admincms/resources/views/layouts"
 	],
 	"file_history":
 	[
@@ -165,8 +184,67 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/Http/Controllers/AdminPostsController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3042,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2894,
+								2984
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 391.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": ".env",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 451,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],

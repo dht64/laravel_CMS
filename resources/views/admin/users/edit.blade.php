@@ -47,7 +47,7 @@
 			{!! Form::close() !!}
 			
 			{!! Form::open(['method'=>'DELETE', 'action'=>['AdminUsersController@destroy', $user->id]]) !!}
-				<div class="form-group">
+				<div class="form-group" style="margin-top:-50px;">
 					{!! Form::submit('Delete user', ['class'=>'btn btn-danger col-sm-3']) !!}
 				</div>
 			{!! Form::close() !!}
@@ -56,4 +56,5 @@
 	<div class="row">
 		@include('includes.form_error')
 	</div>	
+	<hr>
 @stop
